@@ -45,10 +45,12 @@ for(let i =0;i<currentWord.length;i++){
   wordContainer.text(currentWord);
 }
 console.log("FUNCTION GETWORD: " + randomWord +" "+ currentWord);
+
 guessRemaining = 20;
 countContainer.text(guessRemaining);
 wrongGuesses = [];
-wordContainer.text(wrongGuesses);
+guessContainer.text(wrongGuesses);
+wordContainer.text(currentWord);
 
 
 }
