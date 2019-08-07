@@ -37,27 +37,45 @@ animation: AnimationName 30s ease infinite;
   
 }
 
+img {
+  background-color: blue; 
+  border: 3px solid; 
+  border-color: black; 
+  border-radius: 5%; 
+  align-content: center; 
+  margin-left: 300px; 
+  
+ 
+
+}
+
+h2 {
+  text-align: center; 
+}
+
+.sidebar {
+  text-decoration: underline; 
+}
+
 .container {
   background-color: white; 
   border: 0px solid; 
   border-radius: 2%; 
   position: center; 
-
-}
-
-img {
-  align-content: center; 
-  position: flex; 
   
 
 }
 
 
+
+
 .container {
   font-family: 'Vollkorn', serif;
+  
   color: black; 
   line-height: 2.5em;
   font-size: 10em; 
+  
 }
 
 footer {
