@@ -67,8 +67,8 @@ document.onkeyup = function(event){
       wrongGuesses.push(letter);
       guessContainer.text(wrongGuesses);
       if(guessRemaining === 0){
-        console.log("Sorry out of guesses! The word was: " + randomWord);
-        getWord();
+        alert("Sorry out of guesses! The word was: " + randomWord);
+        // getWord();
       }
     }
 
@@ -79,13 +79,13 @@ document.onkeyup = function(event){
   wordContainer.text(currentWord);
 
   console.log("The letter you entered was: " + letter + " the current word is: " + stringConvert+ " the random word is: " + randomWord);
-
+  getWord();
   // If the word is solved get a new random word.
   if(stringConvert == randomWord){
     console.log("You Win!")
     numOfWins++;
     winsContainer.text(numOfWins);
-    getWord();
+    // getWord();
   }
 
 }
@@ -99,8 +99,10 @@ function playGame(){
   }
   
   
-  
+  $('button').on('click',function(){
+    getWord();
+  })
   
   // call functions
   
-  getWord();
+  // getWord();
