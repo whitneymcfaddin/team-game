@@ -37,6 +37,11 @@ animation: AnimationName 30s ease infinite;
   
 }
 
+.btn {
+  margin: 10px; 
+  align-self: center; 
+}
+
 img {
   background-color: blue; 
   border: 3px solid; 
