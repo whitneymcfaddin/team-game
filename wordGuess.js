@@ -4,8 +4,9 @@
 
 // edit page elements with jQuery
 var winsContainer = $('#winstracker');
-var guessContainer = $('#guessesremaining');
+var countContainer = $('#guessesremaining');
 var guessContainer = $('#playerguesses');
+var wordContainer = $('#currentword');
 
 
 // Game Variables
@@ -15,6 +16,7 @@ var wordList = ["cat","dog","fish","mouse","cow","owl","rabbit","can"];
 var randomWord = "";
 var guessRemaining = 20;
 var wrongGuesses = [];
+var stringConvert = "";
 
 // User Variables
 var userGuess = "";
@@ -40,6 +42,7 @@ function getWord(){
 currentWord.length = randomWord.length;
 for(let i =0;i<currentWord.length;i++){
   currentWord[i] = "_";
+  wordContainer.text(currentWord);
 }
 console.log("FUNCTION GETWORD: " + randomWord +" "+ currentWord);
 }
@@ -53,13 +56,16 @@ document.onkeyup = function(event){
     if(letter === randomWord[i]){
       //Check the letter and store in currentWord.
       currentWord[i] = letter;
+      wordContainer.text(currentWord);
+
       found = true;
-      wrongGuesses.push(letter);
     }
     else if(i === randomWord.length-1 && found === false) {
       guessRemaining--;
+      countContainer.text(guessRemaining);
       console.log(letter + " was not part of the word. You have " + guessRemaining + " remaining.")
       wrongGuesses.push(letter);
+      guessContainer.text(wrongGuesses);
       if(guessRemaining === 0){
         console.log("Sorry out of guesses! The word was: " + randomWord);
         getWord();
@@ -68,8 +74,10 @@ document.onkeyup = function(event){
 
     
   }
-  let stringConvert = "";
+  // let stringConvert = "";
   stringConvert = currentWord.join("");
+  wordContainer.text(currentWord);
+
   console.log("The letter you entered was: " + letter + " the current word is: " + stringConvert+ " the random word is: " + randomWord);
 
   // If the word is solved get a new random word.
