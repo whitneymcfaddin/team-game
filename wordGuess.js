@@ -2,6 +2,11 @@
 // Word Guess game
 // wordGuess.js
 
+// edit page elements with jQuery
+var winsContainer = $('#winstracker');
+var guessContainer = $('#guessesremaining');
+var guessContainer = $('#playerguesses');
+
 
 // Game Variables
 var numOfWins = 0;
@@ -71,7 +76,7 @@ document.onkeyup = function(event){
   if(stringConvert == randomWord){
     console.log("You Win!")
     numOfWins++;
-    winsContainer = numOfWins.stringConvert;
+    winsContainer.text(numOfWins);
     getWord();
   }
 
