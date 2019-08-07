@@ -1,37 +1,68 @@
 body {
-  background: linear-gradient(83deg, #43be9e, #361fcd);
-  background-size: 400% 400%;
-  
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
-  
-  @-webkit-keyframes AnimationName {
-      0%{background-position:0% 10%}
-      50%{background-position:100% 91%}
-      100%{background-position:0% 10%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:0% 10%}
-      50%{background-position:100% 91%}
-      100%{background-position:0% 10%}
-  }
-  @keyframes AnimationName { 
-      0%{background-position:0% 10%}
-      50%{background-position:100% 91%}
-      100%{background-position:0% 10%}
-  }
+  background: linear-gradient(270deg, #079762, #11326e);
+background-size: 400% 400%;
 
-.p {
-  line-height: 1.5em; 
-  border: solid 0px; 
-  border-radius: 10%; 
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:38% 0%}
+    50%{background-position:63% 100%}
+    100%{background-position:38% 0%}
+}
+}
+
+.header1 {
+  color: black; 
+  text-align: center; 
+  background-color: white; 
+  border: 1px solid; 
+  font-family: 'Vollkorn', serif;
+}
+
+.playerguesses {
+  background-color: red; 
+  color: yellow; 
+  
 }
 
 .container {
-  margin: 0px; 
-  border: solid 1px; 
-  border-radius: 10%; 
-  color: red; 
+  background-color: white; 
+  border: 0px solid; 
+  border-radius: 2%; 
+  position: center; 
 
 }
+
+img {
+  align-content: center; 
+  position: flex; 
+  
+
+}
+
+
+.container {
+  font-family: 'Vollkorn', serif;
+  color: black; 
+  line-height: 2.5em;
+  font-size: 10em; 
+}
+
+footer {
+  background-color: black; 
+}
+
+
+
