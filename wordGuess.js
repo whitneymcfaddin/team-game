@@ -113,4 +113,4 @@ function playGame(){
   
   // call functions
   
-  // getWord();
+  getWord();
