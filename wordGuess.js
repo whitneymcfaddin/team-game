@@ -45,6 +45,12 @@ for(let i =0;i<currentWord.length;i++){
   wordContainer.text(currentWord);
 }
 console.log("FUNCTION GETWORD: " + randomWord +" "+ currentWord);
+guessRemaining = 20;
+guessContainer.text(guessRemaining);
+wrongGuesses = [];
+guessContainer.text(wrongGuesses);
+
+
 }
 
 // When the user presses a letter, test the letter.
@@ -68,7 +74,8 @@ document.onkeyup = function(event){
       guessContainer.text(wrongGuesses);
       if(guessRemaining === 0){
         alert("Sorry out of guesses! The word was: " + randomWord);
-        // getWord();
+        getWord();
+        // guessRemaining = 20;
       }
     }
 
@@ -79,7 +86,6 @@ document.onkeyup = function(event){
   wordContainer.text(currentWord);
 
   console.log("The letter you entered was: " + letter + " the current word is: " + stringConvert+ " the random word is: " + randomWord);
-  getWord();
   // If the word is solved get a new random word.
   if(stringConvert == randomWord){
     console.log("You Win!")
