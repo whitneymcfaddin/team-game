@@ -46,9 +46,9 @@ for(let i =0;i<currentWord.length;i++){
 }
 console.log("FUNCTION GETWORD: " + randomWord +" "+ currentWord);
 guessRemaining = 20;
-guessContainer.text(guessRemaining);
+countContainer.text(guessRemaining);
 wrongGuesses = [];
-guessContainer.text(wrongGuesses);
+wordContainer.text(wrongGuesses);
 
 
 }
